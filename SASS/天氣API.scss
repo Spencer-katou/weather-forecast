@@ -1,0 +1,303 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #91beda;
+    font-family: "DotGothic16", sans-serif;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    // color: black;
+
+}
+
+svg {
+    height: calc(100vh - 70px);
+}
+
+path {
+    stroke: white;
+    fill: transparent;
+    transition: .5s;
+    cursor: pointer;
+
+    &:hover {
+        fill: #518f73;
+        transform: translate(-5px, -5px);
+    }
+}
+
+.title-tw {
+    position: absolute;
+    top: 65px;
+    right: 180px;
+    color: white;
+    font-size: 30px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav {
+    background-color: #b1cce7;
+    height: 65px;
+    display: flex;
+
+    .nav-content {
+        width: 85%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        .logo {
+            padding: 0 20px;
+            height: 100%;
+
+            img {
+                height: 65px;
+            }
+        }
+
+        .nav-item {
+            li {
+                margin-right: 15px;
+                padding: 0 20px;
+
+                a {
+                    color: yellow;
+                }
+            }
+
+            .north {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    height: 30px;
+                    background-image: url(../img/雲朵.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    left: 30px;
+                    top: 5px;
+                    transition: .5s;
+                }
+
+                &:hover::after {
+                    left: 45px;
+                    top: 7px;
+                }
+
+            }
+
+
+            .middle {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    height: 30px;
+                    background-image: url(../img/雲朵.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    left: 30px;
+                    top: 5px;
+                    transition: 0.5s;
+                }
+
+                &:hover::after {
+                    left: 45px;
+                    top: 7px;
+                }
+            }
+
+            .south {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    height: 30px;
+                    background-image: url(../img/雲朵.png);
+                    background-repeat: no-repeat;
+                    // background-position: center;
+                    background-size: contain;
+                    left: 30px;
+                    top: 5px;
+                    transition: 0.5s;
+                }
+
+                &:hover::after {
+                    left: 45px;
+                    top: 7px;
+                }
+            }
+
+            .east {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    height: 30px;
+                    background-image: url(../img/雲朵.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    left: 30px;
+                    top: 5px;
+                    transition: 0.5s;
+                }
+
+                &:hover::after {
+                    left: 45px;
+                    top: 7px;
+                }
+            }
+
+            .island {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    height: 30px;
+                    background-image: url(../img/雲朵.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    left: 30px;
+                    top: 5px;
+                    transition: 0.5s;
+                }
+
+                &:hover::after {
+                    left: 45px;
+                    top: 7px;
+                }
+            }
+        }
+
+        .nav-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            height: 100%;
+            font-family: 'clockicons';
+            color: #fff;
+
+            .date {
+                margin-top: 5px;
+                display: block;
+                font-size: 15px;
+            }
+
+            .clock {
+                font-size: 40px;
+            }
+        }
+
+    }
+}
+
+.card-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    margin: 100px auto;
+
+    .cards {
+        position: relative;
+        background-color: #518f73;
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        text-align: center;
+        transition: 1s;
+        overflow: hidden;
+        color: #518f73;
+
+        .card {
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+
+            .weather-img {
+                background-size: contain;
+                width: 50px;
+                height: 50px;
+                margin: auto;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    background-image: url(../img/雲朵.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 50px;
+                    height: 50px;
+                    margin: auto;
+                    position: absolute;
+                }   &::after {
+                    content: "";
+                    background-image: url(../img/雲朵.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 80px;
+                    height: 50px;
+                    margin: auto;
+                    position: absolute;
+                    left: 0;
+                    top: 70%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+
+            h2 {
+                font-size: 30px;
+                color: white;
+            }
+
+            .weather-info {
+                font-size: 16px;
+            }
+        }
+
+        &:hover {
+            width: 260px;
+            height: 380px;
+            border-radius: 15px;
+            color: white;
+        }
+
+    }
+}
+
+.hide-potato {
+    display: none;
+}
+
+.show-potato {
+    display: block;
+}
